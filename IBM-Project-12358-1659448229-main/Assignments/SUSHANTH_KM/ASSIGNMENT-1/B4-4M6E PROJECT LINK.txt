@@ -1,0 +1,3 @@
+In this project, I have Simulated the real time smoke and detection and temperature measurement project using arduino uno R3 microcontroller, temperature and Gas Sensor.
+Simulation is done using tinkercad
+https://www.tinkercad.com/things/jTjNn9gkv2R?sharecode=wkLl1wgu9AcwyN0jFzjFIg63MaF87derz2Q4y9wO1zE

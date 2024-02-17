@@ -1,0 +1,55 @@
+//Created by SUSHANTH_KM
+//REAL TIME SMOKE AND TEMPERATURE DETECTION PROJECT 
+
+int LED = 6;
+const int gas = 0;
+int MQ2pin = A0;
+float temp;
+int tempPin=A2;
+
+
+void setup() 
+{
+  pinMode(tempPin, INPUT);
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+}
+
+void loop() 
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  temp=analogRead(tempPin);
+     temp=float(temp*0.48828125);
+     Serial.print("TEMPERATURE =");
+     Serial.print(temp);
+     Serial.print("*C");
+     Serial.println();
+     delay(1000);
+     digitalWrite(7,HIGH);
+     delay(1000);
+   digitalWrite(7,LOW);
+     delay(1000);
+    
+  float sensorValue,MQ2pin;
+sensorValue = analogRead(MQ2pin); // read analog input pin 0
+
+  if(sensorValue >= 470){
+    digitalWrite(LED,HIGH);
+    Serial.print(sensorValue);
+    Serial.println("SMOKE HAS BEEN DETECTED");
+    
+  
+  }
+  else{
+  	digitalWrite(LED,LOW);
+    Serial.println("Sensor Value: ");
+    Serial.println(sensorValue);
+  } 
+  delay(1000);
+}
+	float getsensorValue(int pin){
+  	return (analogRead(pin)); 
+}

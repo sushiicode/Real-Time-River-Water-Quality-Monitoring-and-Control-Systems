@@ -1,0 +1,17 @@
+MY FILES
+B4-4M6E ASSIGNMENT-1 LINK:
+
+https://www.tinkercad.com/things/jTjNn9gkv2R?sharecode=wkLl1wgu9AcwyN0jFzjFIg63MaF87derz2Q4y9wO1zE
+
+B4-4M6E ASSIGNMENT-2 CODE:
+
+import random
+import time
+while(1):
+    temperature = random.randint(0,100)
+    humidity = random.randint(0,100)
+    if temperature>70:
+        print("WARNING!! HIGH TEMPERATURE DETECTED")
+        print("TEMPERATURE RECORDED:",str(temperature)+'°C',"HUMIDITY DETECTED:",humidity)
+        print("\n")
+        time.sleep(2)
